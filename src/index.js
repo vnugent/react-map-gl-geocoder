@@ -94,9 +94,9 @@ class Geocoder extends Component {
     }
 
     if (inputValue !== undefined && inputValue !== null) {
-      this.geocoder.setInput(inputValue)
+      this.geocoder.query(inputValue)
     } else if (this.cachedResult) {
-      this.geocoder.setInput(this.cachedResult.place_name)
+      this.geocoder.query(this.cachedResult.place_name)
     }
 
     if (this.cachedResult || (inputValue !== undefined && inputValue !== null)) {
